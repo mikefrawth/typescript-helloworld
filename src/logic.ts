@@ -1,4 +1,4 @@
-import { Task, TimedTask } from "./models";
+import { Task, TimedTask } from "./models.js";
 
 export function toggleTask(t: Task): Task {
   return { ...t, completed: !t.completed };

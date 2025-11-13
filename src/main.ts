@@ -1,5 +1,5 @@
-import { Task } from "./models";
-// import { toggleTask } from "./logic";
+import { Task } from "./models.js";
+import { toggleTask } from "./logic.js";
 
 const tasks: Task[] = [
   { id: 1, title: "Learn TypeScript", completed: false },
@@ -21,12 +21,12 @@ function renderTasks() {
     li.addEventListener("click", () => {
       const index = tasks.findIndex(t => t.id === task.id);
       if (index !== -1) {
-        // tasks[index] = toggleTask(tasks[index]);
-        const current = tasks[index];
-        tasks[index] = {
-          ...current,
-          completed: !current.completed,
-        };
+        tasks[index] = toggleTask(tasks[index]);
+        // const current = tasks[index];
+        // tasks[index] = {
+        //   ...current,
+        //   completed: !current.completed,
+        // };
         renderTasks();
       }
     });
