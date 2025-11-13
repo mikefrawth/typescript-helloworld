@@ -1,5 +1,6 @@
 import { Task, TimedTask } from "./models.js";
 
+// Logic functions for task management
 export function toggleTask(t: Task): Task {
   return { ...t, completed: !t.completed };
 }
